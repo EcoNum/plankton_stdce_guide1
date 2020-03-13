@@ -1,0 +1,122 @@
+---
+title: "Guide des organismes mésozooplanctonique de la baie de Calvi"
+subtitle: "Basé sur le training set : _train_classif3"
+author: "Thomas Quivy"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.align ='center')
+
+# Attention ce chemin d'accès doit faire référence au chemin du training set _train_classif3
+path <- "../training_set/_train/_train_classif3/"
+
+direction <- fs::dir_ls(path = path, recurse = TRUE, glob = "*.png")
+
+# Fonction pour les graphiques
+plot_classification <- function(path, nx = 5, ny = 5) {
+  zooimage::zidbPlotNew(main = NULL)
+for (i in 1:(nx*ny))
+  zooimage::zidbDrawVignette(path[sample(length(path), 1)], item = i,
+    nx = nx, ny = ny)
+} 
+```
+
+```{r}
+mindr::markmap(".")
+```
+
+# alter
+
+Les classes citées ci-dessous représentent principalement des artéfacts et/ou des particules non planctoniques et ne sont pas considérées dans cette étude. Ces classes ont été créées pour éviter la contamination des classes planctoniques d’intérêt par ces particules (Fullgrabe, 2016). Le fait de ne pas inclure les objets multiples dans le dénombrement conduit donc à une très légère sous-estimation des comptages, sachant que les objets multiples ne représentent jamais plus que quelques pourcents de l’ensemble des particules, typiquement moins de $1$ à $2 \percent $ .
+
+## background noise
+
+Cette classe représente les artéfacts liés à la présence de petites particules en arrière-plan.
+
+```{r}
+dir <- stringr::str_subset(direction, "background noise")
+plot_classification(dir)
+```
+
+## fibers and scratches
+
+Cette classe correspond aux fibres retrouvées dans l’eau, ainsi que les possibles griffes sur les cellules en polystyrène utilisées pour contenir les échantillons scannés.
+
+```{r}
+dir <- stringr::str_subset(direction, "fibers and scratches")
+plot_classification(dir)
+```
+
+## multiple
+
+Les éléments qui se chevauchent, de quelque nature qu’ils soient, se retrouvent classés ici. Lors du remplissage des cellules destinées au scanner, un des objectifs est d’obtenir une densité suffisante pour être représentative de l’échantillon, mais également pas trop importante pour réduire au maximum l’apparition d’objets multiples.
+
+```{r}
+dir <- stringr::str_subset(direction, "multiple")
+plot_classification(dir)
+```
+
+## seston and badfocus
+
+Le seston désigne les particules en suspension dans l’eau. Dans ce cas-ci, seules les particules non-planctoniques sont considérées. Les éléments se retrouvant hors du plan focal et étant trop flous que pour être identifiés sont également regroupés dans cette classe.
+
+```{r}
+dir <- stringr::str_subset(direction, "seston and badfocus")
+plot_classification(dir)
+```
+
+## shadow patches
+
+Des patchs de couleur uniforme peuvent apparaître sur le scan et sont intégrés dans cette classe.
+
+```{r}
+dir <- stringr::str_subset(direction, "shadow patches")
+plot_classification(path = dir)
+```
+
+## single bubbles
+
+Cette classe correspond aux bulles pouvant être présentes lors du scannage.
+
+```{r}
+dir <- stringr::str_subset(direction, "single bubbles")
+plot_classification(dir)
+```
+
+# Cnidaria
+
+## Hydrozoa
+
+### Sipho calycophora nectophores 
+
+Ordre appartenant aux Cnidaria, les Siphonophorae sont des organismes coloniaux. Les organismes d’une colonie sont appelés zoïdes et sont disposés le long d’un stolon. Les zoïdes sont différenciés selon leur fonction au sein de la colonie. On peut ainsi distinguer, selon les 3 sous-ordres des Siphonophorae, les gonozoïdes (fonction reproductrice), dactylozoïdes (fonction défensive), gastrozoïdes (fonction digestive), pneumatophore (fonction de flottaison) ou encore les nectophores (fonction locomotrice) (Lakkis, 2011 ; Licandro, Carré et Lindsay, 2017). Seuls ces derniers zoïdes sont considérés dans cette étude. Outre leur forme particulière, ils possèdent souvent un nectosac visible (Kirkpatrick et Pugh,
+ 1984). Le sous-ordre des Cystonectae ne possède pas de nectophores (Licandro, Carré et Lindsay, 2017), et n’est donc pas considéré lors de cette étude.
+ 
+```{r, fig.cap= "vignette représentant un nectophore de Siphonophorae. A : nectosac."}
+knitr::include_graphics(path = "figures/classif3/siphonophorae.png")
+```
+ 
+
+```{r}
+dir <- stringr::str_subset(direction, "Sipho calycophora nectophores")
+plot_classification(dir)
+```
+
+## Scyphozoa
+
+Les Scyphyzoa forment une classe au sein des Cnidaria (Licandro, Fischer et Lindsay, 2017). Dans cette classe, seuls les stades larvaires (ephyra) sont considérés. Ces larves sont reconnaissables de par leur forme étoilée à 8 rayons (Lakkis, 2011)
+
+```{r}
+dir <- stringr::str_subset(direction, "Scyphozoa")
+plot_classification(dir)
+```
+
+# Copepoda
+
+## Gymnoplea
+
+## Podoplea
+
+
+

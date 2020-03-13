@@ -1,0 +1,6 @@
+---
+title: "Guide des organismes mésozooplanctonique de la baie de Calvi"
+subtitle: "Basé sur les training set : _train_classif5c"
+author: "Remy Dugauquier"
+output: html_document
+---

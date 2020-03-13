@@ -37,3 +37,10 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# html
+
+*.html
+*._guide_classif3.Rmd
+*._guide_classif5c.Rmd
+
