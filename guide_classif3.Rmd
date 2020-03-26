@@ -118,5 +118,125 @@ plot_classification(dir)
 
 ## Podoplea
 
+# Crustacea other
+
+## Cladocera
+
+Les Cladocera forment un super-ordre au sein de la classe des Branchiopoda. Ceux-ci sont aisément reconnaissables de par leurs **yeux composés** généralement bien visibles, mais également par la présence fréquente d’une **épine terminale au niveau de la carapace** (Castellani, 2017). Ces organismes présentent un **corps plutôt transparent au niveau de la partie dorsale**.
+
+```{r}
+dir <- stringr::str_subset(direction, "Cladocera")
+plot_classification(dir)
+```
+
+## Megalopa - Krill - Zoea
+
+Cette classe, très hétérogène, est composée de certains stades larvaires de l’ordre des Decapoda, ainsi que des individus de l’ordre des Euphausiacea.
+
+La larve zoea est la première forme larvaire libre chez les Decapoda, à l’exception du sous-ordre des Dendrobranchiata qui est précédé d’un stade nauplius. Chez ce sous-ordre, la larve zoea est également appelée mysis.   
+Le stade suivant chez les Decapoda est appelé decapodid, ou encore megalopa chez les Anomoura et Brachyura. Tous sont ici considérés. 
+
+Enfin, l’ordre des Euphausiacea, communément appelé krill, est également intégré dans cette classe pour les stades allant du calyptopys à l’adulte. 
+
+Au vu de la grande variabilité des formes observées dans cette classe, il est compliqué de présenter une caractéristique typique permettant de discriminer cette classe, il est même parfois difficile de différencier les stades entres eux (Buckland et al., 2017).
+
+```{r}
+dir <- stringr::str_subset(direction, "Megalopa-Krill-Zoea")
+plot_classification(dir)
+```
+
+## Nauplius
+
+La larve nauplius libre correspond au premier stade de développement après éclosion d’un bon nombre de crustacés. Ceux-ci comprennent les taxa des Cephalocarida, Branchiopoda, Ostracoda, Mystracocarida, Copepoda, Cirripedia, Ascothoracida, Facetotecta, Euphausiacea et les Dendrobranchiata.  
+Ce stade larvaire est caractérisé par **au moins trois paires d’appendices** (antennules, antennes et mandibules) ainsi que d’un oeil nauplien médian, généralement non-distinguable sur les vignettes (Dahms, 2000).  
+
+```{r}
+dir <- stringr::str_subset(direction, "Nauplius")
+plot_classification(dir)
+```
+
+# Tunicata - Chaetognatha
+
+## Chaetognatha
+
+Les Chaetognatha, organismes carnivores, forment un phylum où une septantaine d’espèces sont pélagiques. Ils possèdent un **corps séparé en trois parties** (tête, tronc et queue) bien visibles, et sont surtout reconnaissables par la présence de **crochets au niveau de la tête** (Pierrot-Bults, 2017).
+
+```{r}
+dir <- stringr::str_subset(direction, "Chaetognatha")
+plot_classification(dir)
+```
+
+## Tunicata
+
+### Appendicularia
+
+#### Appendicularia complete
+
+Les Appendicularia forment une classe au sein des Tunicata. Contrairement aux chaetognathes, leur **corps est subdivisé en deux parties** : le tronc et la queue (Fig. 24). Le tronc secrète une « maison gélatineuse », qui sert à l’alimentation de l’organisme par filtration de petites particules présentes dans l’eau. Cependant, elle est généralement absente ou endommagée si l’échantillonnage est effectué avec un filet (Gorsky et Castellani, 2017).
+
+```{r}
+dir <- stringr::str_subset(direction, "Appendicularia complete")
+plot_classification(dir)
+```
+
+#### Appendicularia tails
+
+Il n’est pas rare que, lors de l’échantillonnage, le tronc et la queue de l’appendiculaire se retrouvent séparés (Michaels et al., 1990; Hidaka, 2008). Ces queues sont reconnaissables de par leur **forme étirée**, ainsi que par la **bande plus dense formée par les muscles** de la queue. La notochorde peut **parfois** être visible, apparaissant comme une **zone plus claire au milieu de la masse musculaire** (Gorsky et Castellani, 2017).
+
+```{r}
+dir <- stringr::str_subset(direction, "Appendicularia tails")
+plot_classification(dir)
+```
+
+### Thaliacea
+
+A l’instar des Appendicularia, les Thaliacea forment une classe au sein des Tunicata. Dans cette étude, seules les familles Doliolidae et Salpidae sont considérées. Celles-ci possèdent une **forme de baril**, et sont aisément reconnaissables de par les **bandes musculaires qui encerclent le corps** (Licandro et Brunetta, 2017). 
+
+```{r}
+dir <- stringr::str_subset(direction, "Thaliacea")
+plot_classification(dir)
+```
+
+# Zooplankton other
+
+## Aulocantha scolymantha
+
+Anciennement classé dans les Radiolaria, *Aulacantha scolymantha* se retrouve actuellement dans le phylum des Cercozoa au sein de la sous-classe des Phaeodaria (Sierra et al., 2013). Il s’agit d’un protiste holoplanctonique hétérotrophe (Nakamura et Suzuki, 2015).
+
+La **partie dense au centre** comprend la capsule centrale (qui contient le noyau et l’endosplasme) et le phaeodium, une masse de particules brunes. La **partie plus claire en périphérie** correspond au scleracoma, qui désigne les parties squelettiques siliceuses de l’organisme (Nakamura et Suzuki, 2015).
+
+```{r}
+dir <- stringr::str_subset(direction, "Aulocantha scolymantha")
+plot_classification(dir)
+```
+
+## Cavolinia
+
+Cette classe regroupe les individus du genre Cavolinia. Ceux-ci sont des mollusques holoplanctoniques appartenant à la classe des Gasteropoda. Ces organismes sont reconnaissables par leur **épine caudale** et par leurs **projections latérales** (Lischka et Ossenbrügger, 2017).
+
+```{r}
+dir <- stringr::str_subset(direction, "Cavolinia")
+plot_classification(dir)
+```
+
+## Eggs
+
+Bon nombre de taxa marins se retrouvent sous forme d’œuf au cours de leur cycle de vie (Moran et McAlister, 2009). Ces œufs sont **généralement sphériques** et possèdent majoritairement un **contenu vitellin visible**. 
+
+```{r}
+dir <- stringr::str_subset(direction, "Eggs")
+plot_classification(dir)
+```
+
+## Pisces larvae
+
+Les téléostéens possèdent majoritairement un stade planctonique au cours de leur vie. Il s’agit donc de méroplancton. Ces individus sont aisément reconnaissables grâce à leur **nageoire primaire qui s’étend sur presque tout le long de l’organisme** ainsi que par la **présence d’yeux** déjà visibles. Les nageoires pectorales peuvent parfois être observées dès les premiers stades larvaires (Munk et Nielsen, 2017).
+
+```{r}
+dir <- stringr::str_subset(direction, "Pisces larvae")
+plot_classification(dir)
+```
+
+
 
 
