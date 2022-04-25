@@ -1,0 +1,322 @@
+---
+title: "Guide des organismes mésozooplanctonique de la baie de Calvi"
+subtitle: "Basé sur le training set : _train_classif3"
+date: 2018-06-01
+author: 
+  - name: "Thomas Quivy"
+    affiliation: "Service d'écologie numérique, Université de Mons, Belgique"
+lang: fr
+editor: visual
+format: 
+  html:
+    toc: true
+    number-sections: true
+bibliography: references.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.align ='center')
+
+# Attention ce chemin d'accès doit faire référence au chemin du training set _train_classif3
+path <- "../training_set/_train/_train_classif3/"
+direction <- fs::dir_ls(path = path, recurse = TRUE, glob = "*.png")
+
+# Fonction pour les graphiques
+plot_classification <- function(paths, nx = 5, ny = 5) {
+  vigs_max <- length(paths)
+  
+  if(vigs_max <= (nx*ny)) {
+    stop("The number of images is too low")
+  }
+  
+  vigs <- sample(paths, size = (nx*ny), replace = FALSE)
+
+  zooimage::zidbPlotNew(main = NULL)
+for (i in 1:(nx*ny))
+  zooimage::zidbDrawVignette(vigs[i], item = i,
+    nx = nx, ny = ny)
+} 
+```
+
+Ce guide a pour objectif de présenter les différents groupes utilisé ...
+
+
+# Cnidaria
+
+## Hydrozoa
+
+### Sipho calycophora nectophores
+
+Ordre appartenant aux Cnidaria, les Siphonophorae sont des organismes coloniaux. Les organismes d'une colonie sont appelés zoïdes et sont disposés le long d'un stolon. Les zoïdes sont différenciés selon leur fonction au sein de la colonie. On peut ainsi distinguer, selon les 3 sous-ordres des Siphonophorae, les gonozoïdes (fonction reproductrice), dactylozoïdes (fonction défensive), gastrozoïdes (fonction digestive), pneumatophore (fonction de flottaison) ou encore les nectophores (fonction locomotrice) [@licandro2017b; @lakkissami2013a] . Seuls ces derniers zoïdes sont considérés dans cette étude. Outre leur forme particulière, ils possèdent souvent un nectosac visible [@kirkpatrick1984] . Le sous-ordre des Cystonectae ne possède pas de nectophores [@licandro2017b], et n'est donc pas considéré lors de cette étude.
+
+```{r, fig.cap= "vignette représentant un nectophore de Siphonophorae. A : nectosac."}
+knitr::include_graphics(path = "figures/classif3/siphonophorae.png")
+```
+
+```{r}
+dir <- stringr::str_subset(direction, "Sipho calycophora nectophores")
+plot_classification(dir)
+```
+
+## Scyphozoa
+
+Les Scyphyzoa forment une classe au sein des Cnidaria [@licandro2017a]. Dans cette classe, seuls les stades larvaires (ephyra) sont considérés. Ces larves sont reconnaissables de par leur forme étoilée à 8 rayons [@lakkissami2013b]
+
+```{r}
+dir <- stringr::str_subset(direction, "Scyphozoa")
+plot_classification(dir)
+```
+
+# Copepoda
+
+Les trois ordres de copépodes les plus abondants au niveau de la baie de Calvi sont
+considérés: Calanoida, Cyclopoida et Poecilostomatoida. Une étude récente tend
+cependant à inclure les Poecilostomatoida au sein des Cyclopoida [@khodami2017]
+
+Dans ce guide, où le set d'apprentissage a été en 2016, l'ancienne taxonomie est utilisée.
+
+Les Copepoda occupent une part importante dans la littérature sur le zooplancton grâcenotamment à leur distribution ubiquiste et à leur importance dans les réseaux trophiques marins. Ils sont également considérés comme les animaux multicellulaires les plus abondants sur terre (Richardson, 2008) [@richardson2008].
+
+Le corps des copépodes peut se subdiviser en trois parties : la tête (céphalosome), le thorax (métasome) et l'abdomen (urosome) dont la forme respective est un critère de différentiiation taxonomique important [@wooton2017].
+
+```{r, fig.cap= "Vignettes représentant les 3 ordres de Copepoda considérés dans l'étude. 1. : Calanoida ; 2. : Cyclopoida ; 3. Poecilostomatoida. A : prosome ; B : Urosome ; C : antennule."}
+knitr::include_graphics(path = "figures/classif3/copepoda.png")
+```
+
+## Gymnoplea
+
+Le Super-ordre des Gymnoplea comprend l'ordre de Calanoida. Cet ordre comprend le plus grand nombre d'espèces au sein des copépodes. Ceux-ci possèdent généralemetn des antennules plus grandes que les céphalosome, ainsi qu'un urosome plus petit que le prosome (céphalosome + métasome) [@wooton2017].
+
+## Podoplea
+
+### Cyclopoida					
+
+Ce clade possède un urosome aussi long que le prosome, ainsi que des antennules généralement plus grandes que le céphalosome [@wooton2017].
+
+```{r}
+dir <- stringr::str_subset(direction, "Cyclopoida")
+plot_classification(dir)
+```
+
+### Poecilostomatoida			
+
+Ce taxon comprend des espèces de formes variables. Les antennules sont ici plus petites que le céphalosome [@wooton2017]. Seuls les individus appartenant aux familles des Corycaeidae et des Oncaeidae sont ici considérés
+
+# Crustacea other
+
+## Cladocera
+
+Les Cladocera forment un super-ordre au sein de la classe des Branchiopoda. Ceux-ci sont aisément reconnaissables de par leurs **yeux composés** généralement bien visibles, mais également par la présence fréquente d'une **épine terminale au niveau de la carapace** [@castellani2017]. Ces organismes présentent un **corps plutôt transparent au niveau de la partie dorsale**.
+
+```{r, fig.cap= "Vignette représentant un Cladocera. A : oeil composé ; B : épine terminale."}
+knitr::include_graphics(path = "figures/classif3/cladocera.png")
+```
+
+```{r}
+dir <- stringr::str_subset(direction, "Cladocera")
+plot_classification(dir)
+```
+
+## Megalopa - Krill - Zoea
+
+Cette classe, très hétérogène, est composée de certains stades larvaires de l'ordre des Decapoda, ainsi que des individus de l'ordre des Euphausiacea.
+
+La larve zoea est la première forme larvaire libre chez les Decapoda, à l'exception du sous-ordre des Dendrobranchiata qui est précédé d'un stade nauplius. Chez ce sous-ordre, la larve zoea est également appelée mysis.\
+Le stade suivant chez les Decapoda est appelé decapodid, ou encore megalopa chez les Anomoura et Brachyura. Tous sont ici considérés.
+
+Enfin, l'ordre des Euphausiacea, communément appelé krill, est également intégré dans cette classe pour les stades allant du calyptopys à l'adulte.
+
+Au vu de la grande variabilité des formes observées dans cette classe, il est compliqué de présenter une caractéristique typique permettant de discriminer cette classe, il est même parfois difficile de différencier les stades entres eux [@buckland2017].
+
+```{r, fig.cap= "Vignette représentant une larve zoea de Decapoda."}
+knitr::include_graphics(path = "figures/classif3/zoea.png")
+```
+
+```{r}
+dir <- stringr::str_subset(direction, "Megalopa-Krill-Zoea")
+plot_classification(dir)
+```
+
+## Nauplius
+
+La larve nauplius libre correspond au premier stade de développement après éclosion d'un bon nombre de crustacés. Ceux-ci comprennent les taxa des Cephalocarida, Branchiopoda, Ostracoda, Mystracocarida, Copepoda, Cirripedia, Ascothoracida, Facetotecta, Euphausiacea et les Dendrobranchiata.\
+Ce stade larvaire est caractérisé par **au moins trois paires d'appendices** (antennules, antennes et mandibules) ainsi que d'un oeil nauplien médian, généralement non-distinguable sur les vignettes (Dahms, 2000).
+
+```{r, fig.cap= "Vignette représentant un nauplius. A : antennule ; B : antenne ; C : mandibule."}
+knitr::include_graphics(path = "figures/classif3/nauplius.png")
+```
+
+```{r}
+dir <- stringr::str_subset(direction, "Nauplius")
+plot_classification(dir)
+```
+
+# Tunicata - Chaetognatha
+
+## Chaetognatha
+
+Les Chaetognatha, organismes carnivores, forment un phylum où une septantaine d'espèces sont pélagiques. Ils possèdent un **corps séparé en trois parties** (tête, tronc et queue) bien visibles, et sont surtout reconnaissables par la présence de **crochets au niveau de la tête** [@pierrots-bults2017].
+
+```{r, fig.cap= "vignette représentant un Chaetognatha. A : tête ; B : tronc ; C : queue ; D : crochets."}
+knitr::include_graphics(path = "figures/classif3/chaetognatha.png")
+```
+
+```{r}
+dir <- stringr::str_subset(direction, "Tunicata - Chaetognatha/Chaetognatha")
+plot_classification(dir)
+```
+
+## Tunicata
+
+### Appendicularia
+
+#### Appendicularia complete
+
+Les Appendicularia forment une classe au sein des Tunicata. Contrairement aux chaetognathes, leur **corps est subdivisé en deux parties** : le tronc et la queue. Le tronc secrète une « maison gélatineuse », qui sert à l'alimentation de l'organisme par filtration de petites particules présentes dans l'eau. Cependant, elle est généralement absente ou endommagée si l'échantillonnage est effectué avec un filet [@gorsky2017].
+
+```{r, fig.cap= "vignette représentant un Chaetognatha. A : tête ; B : tronc ; C : queue ; D : crochets."}
+knitr::include_graphics(path = "figures/classif3/appendicularia_comp.png")
+```
+
+```{r}
+dir <- stringr::str_subset(direction, "Appendicularia complete")
+plot_classification(dir)
+```
+
+#### Appendicularia tails
+
+Il n'est pas rare que, lors de l'échantillonnage, le tronc et la queue de l'appendiculaire se retrouvent séparés [@michaels1990]. Ces queues sont reconnaissables de par leur **forme étirée**, ainsi que par la **bande plus dense formée par les muscles** de la queue. La notochorde peut **parfois** être visible, apparaissant comme une **zone plus claire au milieu de la masse musculaire** [@gorsky2017].
+
+```{r, fig.cap= "Vignette représentant une queue d'Appendicularia. A : masse musculaire ; B : notochorde."}
+knitr::include_graphics(path = "figures/classif3/appendicularia_tails.png")
+```
+
+```{r}
+dir <- stringr::str_subset(direction, "Appendicularia tails")
+plot_classification(dir)
+```
+
+### Thaliacea
+
+A l'instar des Appendicularia, les Thaliacea forment une classe au sein des Tunicata. Dans cette étude, seules les familles Doliolidae et Salpidae sont considérées. Celles-ci possèdent une **forme de baril**, et sont aisément reconnaissables de par les **bandes musculaires qui encerclent le corps** [@licandro2017].
+
+```{r, fig.cap= "Vignette représentant un Thaliacea. A : bandes musculaires."}
+knitr::include_graphics(path = "figures/classif3/thaliacea.png")
+```
+
+```{r}
+dir <- stringr::str_subset(direction, "Thaliacea")
+plot_classification(dir)
+```
+
+# Zooplankton other
+
+## Aulocantha scolymantha
+
+Anciennement classé dans les Radiolaria, *Aulacantha scolymantha* se retrouve actuellement dans le phylum des Cercozoa au sein de la sous-classe des Phaeodaria [@sierra2013]. Il s'agit d'un protiste holoplanctonique hétérotrophe [@nakamura2015] .
+
+La **partie dense au centre** comprend la capsule centrale (qui contient le noyau et l'endosplasme) et le phaeodium, une masse de particules brunes. La **partie plus claire en périphérie** correspond au scleracoma, qui désigne les parties squelettiques siliceuses de l'organisme [@nakamura2015].
+
+```{r, fig.cap= "Vignette représentant Aulacantha scolymantha. A : capsule centrale et phaedium ; B : scleracoma."}
+knitr::include_graphics(path = "figures/classif3/aulacantha.png")
+```
+
+```{r}
+dir <- stringr::str_subset(direction, "Aulocantha scolymantha")
+plot_classification(dir)
+```
+
+## Cavolinia
+
+Cette classe regroupe les individus du genre Cavolinia. Ceux-ci sont des mollusques holoplanctoniques appartenant à la classe des Gasteropoda. Ces organismes sont reconnaissables par leur **épine caudale** et par leurs **projections latérales** (Lischka et Ossenbrügger, 2017) [@lischka2017].
+
+```{r, fig.cap= "Vignette représentant un Cavolinia. A : épine caudale ; B : projection latérale."}
+knitr::include_graphics(path = "figures/classif3/cavolinia.png")
+```
+
+```{r}
+dir <- stringr::str_subset(direction, "Cavolinia")
+plot_classification(dir)
+```
+
+## Eggs
+
+Bon nombre de taxa marins se retrouvent sous forme d'œuf au cours de leur cycle de vie (Moran et McAlister, 2009) [@moran2009]. Ces œufs sont **généralement sphériques** et possèdent majoritairement un **contenu vitellin visible**.
+
+```{r}
+dir <- stringr::str_subset(direction, "Eggs")
+plot_classification(dir)
+```
+
+## Pisces larvae
+
+Les téléostéens possèdent majoritairement un stade planctonique au cours de leur vie. Il s'agit donc de méroplancton. Ces individus sont aisément reconnaissables grâce à leur **nageoire primaire qui s'étend sur presque tout le long de l'organisme** ainsi que par la **présence d'yeux** déjà visibles. Les nageoires pectorales peuvent parfois être observées dès les premiers stades larvaires [@munk2017].
+
+```{r, fig.cap= "Vignette représentant une larve de poisson. A : oeil ; B : nageoire pectorale ; C : nageoire primaire."}
+knitr::include_graphics(path = "figures/classif3/pisces.png")
+```
+
+```{r}
+dir <- stringr::str_subset(direction, "Pisces larvae")
+plot_classification(dir)
+```
+
+# alter
+
+Les classes citées ci-dessous représentent principalement des artéfacts et/ou des particules non planctoniques et ne sont pas considérées dans cette étude. Ces classes ont été créées pour éviter la contamination des classes planctoniques d'intérêt par ces particules (Fullgrabe, 2016). Le fait de ne pas inclure les objets multiples dans le dénombrement conduit donc à une très légère sous-estimation des comptages, sachant que les objets multiples ne représentent jamais plus que quelques pourcents de l'ensemble des particules, typiquement moins de $1$ à \$2 \percent \$ .
+
+## background noise
+
+Cette classe représente les artéfacts liés à la présence de petites particules en arrière-plan.
+
+```{r}
+dir <- stringr::str_subset(direction, "background noise")
+plot_classification(dir)
+```
+
+## fibers and scratches
+
+Cette classe correspond aux fibres retrouvées dans l'eau, ainsi que les possibles griffes sur les cellules en polystyrène utilisées pour contenir les échantillons scannés.
+
+```{r}
+dir <- stringr::str_subset(direction, "fibers and scratches")
+plot_classification(dir)
+```
+
+## multiple
+
+Les éléments qui se chevauchent, de quelque nature qu'ils soient, se retrouvent classés ici. Lors du remplissage des cellules destinées au scanner, un des objectifs est d'obtenir une densité suffisante pour être représentative de l'échantillon, mais également pas trop importante pour réduire au maximum l'apparition d'objets multiples.
+
+```{r}
+dir <- stringr::str_subset(direction, "multiple")
+plot_classification(dir)
+```
+
+## seston and badfocus
+
+Le seston désigne les particules en suspension dans l'eau. Dans ce cas-ci, seules les particules non-planctoniques sont considérées. Les éléments se retrouvant hors du plan focal et étant trop flous que pour être identifiés sont également regroupés dans cette classe.
+
+```{r}
+dir <- stringr::str_subset(direction, "seston and badfocus")
+plot_classification(dir)
+```
+
+## shadow patches
+
+Des patchs de couleur uniforme peuvent apparaître sur le scan et sont intégrés dans cette classe.
+
+```{r}
+dir <- stringr::str_subset(direction, "shadow patches")
+plot_classification(path = dir)
+```
+
+## single bubbles
+
+Cette classe correspond aux bulles pouvant être présentes lors du scannage.
+
+```{r}
+dir <- stringr::str_subset(direction, "single bubbles")
+plot_classification(dir)
+```
+
+# Références {-}
