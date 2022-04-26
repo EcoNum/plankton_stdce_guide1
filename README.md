@@ -4,20 +4,12 @@ Ce guide d'identification a été réalisé par Thomas Quivy dans le cadre de so
 
 Les classes proposées dans ce guide correspondent au set d'apprentissage utilisée dans les travaux suivants :
 
-- Fullgrabe, Lovina, Philippe Grosjean, Sylvie Gobert, Pierre Lejeune, Michèle Leduc, Guyliann Engels, Patrick Dauby, Pierre Boissery, and Jonathan Richir. 2020. *« Zooplankton Dynamics in a Changing Environment: A 13-Year Survey in the Northwestern Mediterranean Sea »*. Marine Environmental Research 159 (juillet): 104962. <https://doi.org/10.1016/j.marenvres.2020.104962>.
+-   Fullgrabe, Lovina, Philippe Grosjean, Sylvie Gobert, Pierre Lejeune, Michèle Leduc, Guyliann Engels, Patrick Dauby, Pierre Boissery, and Jonathan Richir. 2020. *« Zooplankton Dynamics in a Changing Environment: A 13-Year Survey in the Northwestern Mediterranean Sea »*. Marine Environmental Research 159 (juillet): 104962. <https://doi.org/10.1016/j.marenvres.2020.104962>.
 
-- **Quivy T., 2018.** *Le mésozooplancton de la vaie de Calvi, Corse : étude comparative entre traits verticaux et horizontaux*. Master en biologie des organismes et écologie. Université de Mons, Belgique.
+-   **Quivy T., 2018.** *Le mésozooplancton de la vaie de Calvi, Corse : étude comparative entre traits verticaux et horizontaux*. Master en biologie des organismes et écologie. Université de Mons, Belgique.
 
-- **Fullgrabe L., 2016.** *Characterisation of the mesozooplankton of the Bay of Calvi using a developed semi-automatic classification system of digital images*. Master's in sciences. Université de Liège, Belgique.
+-   **Fullgrabe L., 2016.** *Characterisation of the mesozooplankton of the Bay of Calvi using a developed semi-automatic classification system of digital images*. Master's in sciences. Université de Liège, Belgique.
 
 ## Set d'apprentissage
 
 Le set d'apprentissage associé à ce guide est disponible via le lien suivant : ...
-
-
-
-
-
-
-
-

@@ -1,0 +1,33 @@
+project:
+  type: book
+
+book:
+  title: "Guide des organismes mésozooplanctonique de la baie de Calvi"
+  page-navigation: true
+  author:
+    - name: "Thomas Quivy"
+      affiliation: "Service d'écologie numérique, Université de Mons, Belgique"
+  date: 2018-06-01
+  downloads: pdf
+  repo-url: "https://github.com/EcoNum/plankton_stdce_guide1"
+  chapters:
+    - index.qmd
+    - cnidaria.qmd
+    - copepoda.qmd
+    - tunicata_chaetognatha.qmd
+    - zooplankton_other.qmd
+    - alter.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+lang: fr
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

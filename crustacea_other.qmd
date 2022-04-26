@@ -1,0 +1,58 @@
+# Crustacea other
+
+```{r}
+source("init.R")
+```
+
+## Cladocera
+
+Les Cladocera forment un super-ordre au sein de la classe des Branchiopoda. Ceux-ci sont aisément reconnaissables de par leurs **yeux composés** généralement bien visibles, mais également par la présence fréquente d'une **épine terminale au niveau de la carapace** [@castellani2017]. Ces organismes présentent un **corps plutôt transparent au niveau de la partie dorsale**.
+
+```{r}
+#| fig-cap: "Vignette représentant un Cladocera. A : oeil composé ; B : épine terminale."
+knitr::include_graphics(path = "figures/classif3/cladocera.png")
+```
+
+```{r}
+#| fig-cap: "Série de vignettes de Cladocera."
+dir <- stringr::str_subset(direction, "Cladocera")
+plot_classification(dir)
+```
+
+## Megalopa - Krill - Zoea
+
+Cette classe, très hétérogène, est composée de certains stades larvaires de l'ordre des Decapoda, ainsi que des individus de l'ordre des Euphausiacea.
+
+La larve zoea est la première forme larvaire libre chez les Decapoda, à l'exception du sous-ordre des Dendrobranchiata qui est précédé d'un stade nauplius. Chez ce sous-ordre, la larve zoea est également appelée mysis.\
+Le stade suivant chez les Decapoda est appelé decapodid, ou encore megalopa chez les Anomoura et Brachyura. Tous sont ici considérés.
+
+Enfin, l'ordre des Euphausiacea, communément appelé krill, est également intégré dans cette classe pour les stades allant du calyptopys à l'adulte.
+
+Au vu de la grande variabilité des formes observées dans cette classe, il est compliqué de présenter une caractéristique typique permettant de discriminer cette classe, il est même parfois difficile de différencier les stades entres eux [@buckland2017].
+
+```{r}
+#| fig-cap: "Vignette représentant une larve zoea de Decapoda."
+knitr::include_graphics(path = "figures/classif3/zoea.png")
+```
+
+```{r}
+#| fig-cap: "Série de vignettes de Megalopa-Krill-Zoea."
+dir <- stringr::str_subset(direction, "Megalopa-Krill-Zoea")
+plot_classification(dir)
+```
+
+## Nauplius
+
+La larve nauplius libre correspond au premier stade de développement après éclosion d'un bon nombre de crustacés. Ceux-ci comprennent les taxa des Cephalocarida, Branchiopoda, Ostracoda, Mystracocarida, Copepoda, Cirripedia, Ascothoracida, Facetotecta, Euphausiacea et les Dendrobranchiata.\
+Ce stade larvaire est caractérisé par **au moins trois paires d'appendices** (antennules, antennes et mandibules) ainsi que d'un oeil nauplien médian, généralement non-distinguable sur les vignettes (Dahms, 2000).
+
+```{r}
+#| fig-cap: "Vignette représentant un nauplius. A : antennule ; B : antenne ; C : mandibule."
+knitr::include_graphics(path = "figures/classif3/nauplius.png")
+```
+
+```{r}
+#| fig-cap: "Série de vignettes de Nauplius."
+dir <- stringr::str_subset(direction, "Nauplius")
+plot_classification(dir)
+```

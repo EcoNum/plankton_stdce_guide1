@@ -1,0 +1,32 @@
+# Cnidaria
+
+```{r, echo=FALSE}
+source("init.R")
+```
+
+## Hydrozoa
+
+### Sipho calycophora nectophores
+
+Ordre appartenant aux Cnidaria, les Siphonophorae sont des organismes coloniaux. Les organismes d'une colonie sont appelés zoïdes et sont disposés le long d'un stolon. Les zoïdes sont différenciés selon leur fonction au sein de la colonie. On peut ainsi distinguer, selon les 3 sous-ordres des Siphonophorae, les gonozoïdes (fonction reproductrice), dactylozoïdes (fonction défensive), gastrozoïdes (fonction digestive), pneumatophore (fonction de flottaison) ou encore les nectophores (fonction locomotrice) [@licandro2017b; @lakkissami2013a] . Seuls ces derniers zoïdes sont considérés dans cette étude. Outre leur forme particulière, ils possèdent souvent un nectosac visible [@kirkpatrick1984] . Le sous-ordre des Cystonectae ne possède pas de nectophores [@licandro2017b], et n'est donc pas considéré lors de cette étude.
+
+```{r}
+#| fig-cap: "Vignette représentant un nectophore de Siphonophorae. A : nectosac."
+knitr::include_graphics(path = "figures/classif3/siphonophorae.png")
+```
+
+```{r}
+#| fig-cap: "Série de vignettes de Sipho calycophora nectophores."
+dir <- stringr::str_subset(direction, "Sipho calycophora nectophores")
+plot_classification(dir)
+```
+
+## Scyphozoa
+
+Les Scyphyzoa forment une classe au sein des Cnidaria [@licandro2017a]. Dans cette classe, seuls les stades larvaires (ephyra) sont considérés. Ces larves sont reconnaissables de par leur forme étoilée à 8 rayons [@lakkissami2013]
+
+```{r}
+#| fig-cap: "Série de vignettes de Scyphozoa."
+dir <- stringr::str_subset(direction, "Scyphozoa")
+plot_classification(dir)
+```

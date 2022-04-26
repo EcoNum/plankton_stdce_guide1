@@ -1,0 +1,62 @@
+# Zooplankton other
+
+```{r, echo=FALSE}
+source("init.R")
+```
+
+## Aulocantha scolymantha
+
+Anciennement classé dans les Radiolaria, *Aulacantha scolymantha* se retrouve actuellement dans le phylum des Cercozoa au sein de la sous-classe des Phaeodaria [@sierra2013]. Il s'agit d'un protiste holoplanctonique hétérotrophe [@nakamura2015] .
+
+La **partie dense au centre** comprend la capsule centrale (qui contient le noyau et l'endosplasme) et le phaeodium, une masse de particules brunes. La **partie plus claire en périphérie** correspond au scleracoma, qui désigne les parties squelettiques siliceuses de l'organisme [@nakamura2015].
+
+```{r}
+#| fig-cap: "Vignette représentant Aulacantha scolymantha. A : capsule centrale et phaedium ; B : scleracoma."
+knitr::include_graphics(path = "figures/classif3/aulacantha.png")
+```
+
+```{r}
+#| fig-cap: "Série de vignettes de Aulocantha scolymantha."
+dir <- stringr::str_subset(direction, "Aulocantha scolymantha")
+plot_classification(dir)
+```
+
+## Cavolinia
+
+Cette classe regroupe les individus du genre Cavolinia. Ceux-ci sont des mollusques holoplanctoniques appartenant à la classe des Gasteropoda. Ces organismes sont reconnaissables par leur **épine caudale** et par leurs **projections latérales** (Lischka et Ossenbrügger, 2017) [@lischka2017].
+
+```{r}
+#| fig-cap: "Vignette représentant un Cavolinia. A : épine caudale ; B : projection latérale."
+knitr::include_graphics(path = "figures/classif3/cavolinia.png")
+```
+
+```{r}
+#| fig-cap: "Série de vignettes de Cavolinia."
+dir <- stringr::str_subset(direction, "Cavolinia")
+plot_classification(dir)
+```
+
+## Eggs
+
+Bon nombre de taxa marins se retrouvent sous forme d'œuf au cours de leur cycle de vie (Moran et McAlister, 2009) [@moran2009]. Ces œufs sont **généralement sphériques** et possèdent majoritairement un **contenu vitellin visible**.
+
+```{r}
+#| fig-cap: "Série de vignettes de Eggs."
+dir <- stringr::str_subset(direction, "Eggs")
+plot_classification(dir)
+```
+
+## Pisces larvae
+
+Les téléostéens possèdent majoritairement un stade planctonique au cours de leur vie. Il s'agit donc de méroplancton. Ces individus sont aisément reconnaissables grâce à leur **nageoire primaire qui s'étend sur presque tout le long de l'organisme** ainsi que par la **présence d'yeux** déjà visibles. Les nageoires pectorales peuvent parfois être observées dès les premiers stades larvaires [@munk2017].
+
+```{r}
+#| fig-cap: "Vignette représentant une larve de poisson. A : oeil ; B : nageoire pectorale ; C : nageoire primaire."
+knitr::include_graphics(path = "figures/classif3/pisces.png")
+```
+
+```{r}
+#| fig-cap: "Série de vignettes de Pisces larvae."
+dir <- stringr::str_subset(direction, "Pisces larvae")
+plot_classification(dir)
+```

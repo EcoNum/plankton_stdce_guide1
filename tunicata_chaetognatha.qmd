@@ -1,0 +1,69 @@
+# Tunicata - Chaetognatha
+
+```{r, echo=FALSE}
+source("init.R")
+```
+
+## Chaetognatha
+
+Les Chaetognatha, organismes carnivores, forment un phylum où une septantaine d'espèces sont pélagiques. Ils possèdent un **corps séparé en trois parties** (tête, tronc et queue) bien visibles, et sont surtout reconnaissables par la présence de crochets au niveau de la tête [@pierrotsbults2017] .
+
+```{r}
+#| fig-cap: "Vignette représentant un Chaetognatha. A : tête ; B : tronc ; C : queue ; D : crochets."
+knitr::include_graphics(path = "figures/classif3/chaetognatha.png")
+```
+
+```{r}
+#| fig-cap: "Série de vignettes de Chaetognatha."
+dir <- stringr::str_subset(direction, "Tunicata - Chaetognatha/Chaetognatha")
+plot_classification(dir)
+```
+
+## Tunicata
+
+### Appendicularia
+
+#### Appendicularia complete
+
+Les Appendicularia forment une classe au sein des Tunicata. Contrairement aux chaetognathes, leur **corps est subdivisé en deux parties** : le tronc et la queue. Le tronc secrète une « maison gélatineuse », qui sert à l'alimentation de l'organisme par filtration de petites particules présentes dans l'eau. Cependant, elle est généralement absente ou endommagée si l'échantillonnage est effectué avec un filet [@gorsky2017].
+
+```{r}
+#| fig-cap: "Vignette représentant un Appendicularia. A : tronc ; B : queue."
+knitr::include_graphics(path = "figures/classif3/appendicularia_comp.png")
+```
+
+```{r}
+#| fig-cap: "Série de vignettes de Appendicularia complet."
+dir <- stringr::str_subset(direction, "Appendicularia complete")
+plot_classification(dir)
+```
+
+#### Appendicularia tails
+
+Il n'est pas rare que, lors de l'échantillonnage, le tronc et la queue de l'appendiculaire se retrouvent séparés [@michaels1990]. Ces queues sont reconnaissables de par leur **forme étirée**, ainsi que par la **bande plus dense formée par les muscles** de la queue. La notochorde peut **parfois** être visible, apparaissant comme une **zone plus claire au milieu de la masse musculaire** [@gorsky2017].
+
+```{r}
+#| fig-cap: "Vignette représentant une queue d'Appendicularia. A : masse musculaire ; B : notochorde."
+knitr::include_graphics(path = "figures/classif3/appendicularia_tails.png")
+```
+
+```{r}
+#| fig-cap: "Série de vignettes de queues d'Appendicularia."
+dir <- stringr::str_subset(direction, "Appendicularia tails")
+plot_classification(dir)
+```
+
+### Thaliacea
+
+A l'instar des Appendicularia, les Thaliacea forment une classe au sein des Tunicata. Dans cette étude, seules les familles Doliolidae et Salpidae sont considérées. Celles-ci possèdent une **forme de baril**, et sont aisément reconnaissables de par les **bandes musculaires qui encerclent le corps** [@licandro2017].
+
+```{r}
+#| fig-cap: "Vignette représentant un Thaliacea. A : bandes musculaires."
+knitr::include_graphics(path = "figures/classif3/thaliacea.png")
+```
+
+```{r}
+#| fig-cap: "Série de vignettes de Thaliacea."
+dir <- stringr::str_subset(direction, "Thaliacea")
+plot_classification(dir)
+```
