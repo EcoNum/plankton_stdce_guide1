@@ -3,14 +3,20 @@ project:
   output-dir: docs
 
 book:
-  title: "Guide des organismes mésozooplanctonique de la baie de Calvi"
+  title: "Guide d'identification des organismes mésozooplanctoniques de la Mer Ligurienne"
   page-navigation: true
   author:
     - name: "Thomas Quivy"
       affiliation: "Service d'écologie numérique, Université de Mons, Belgique"
+    - name: "Guyliann Engels"
+      affiliation: "Service d'écologie numérique, Université de Mons, Belgique"
+    - name: "Raphael Conotte"
+      affiliation: "Service d'écologie numérique, Université de Mons, Belgique"
+    - name: "Philippe Grosjean"
+      affiliation: "Service d'écologie numérique, Université de Mons, Belgique"
   date: 2018-06-01
   downloads: pdf
-  repo-url: "https://github.com/EcoNum/plankton_stdce_guide1"
+  repo-url: "https://github.com/EcoNum/zooimage_mesozooplankton_guide1"
   chapters:
     - index.qmd
     - cnidaria.qmd

@@ -1,7 +1,7 @@
 # functions and repetitive code
 
 # Attention ce chemin d'accès doit faire référence au chemin du training set _train_classif3
-path <- "../training_set/_train/_train_classif3/"
+path <- "../../stdce_training_set/_train/_train_classif3/"
 direction <- fs::dir_ls(path = path, recurse = TRUE, glob = "*.png")
 
 # Fonction pour les graphiques

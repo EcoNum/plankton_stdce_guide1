@@ -1,6 +1,6 @@
-# Guide d'identification des organismes planctoniques en baie de Calvi
+# Guide d'identification des organismes mésozooplanctonique de la Mer Ligurienne
 
-Ce guide d'identification a été réalisé par Thomas Quivy dans le cadre de son travail de mémoire présenté en vue de l'obtention du grade de Master en biologie des organismes et écologie *Le mésozooplancton de la vaie de Calvi, Corse : étude comparative entre traits verticaux et horizontaux*.
+Ce guide d'identification a été réalisé par Thomas Quivy dans le cadre de son travail de mémoire présenté en vue de l'obtention du grade de Master en biologie des organismes et écologie *Le mésozooplancton de la vaie de Calvi, Corse : étude comparative entre traits verticaux et horizontaux*. Guyliann Engels, Raphael Conotte et Philippe Grosjean ont contribué dans la correction, l'ajout de vignettes et la mise en page au format Quarto Book.
 
 Les classes proposées dans ce guide correspondent au set d'apprentissage utilisée dans les travaux suivants :
 
@@ -13,3 +13,7 @@ Les classes proposées dans ce guide correspondent au set d'apprentissage utilis
 ## Set d'apprentissage
 
 Le set d'apprentissage associé à ce guide est disponible via le lien suivant : ...
+
+## Contributions
+
+Thomas Quivy a rédigé le guide d'identification
